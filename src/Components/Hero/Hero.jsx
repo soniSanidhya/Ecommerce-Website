@@ -27,14 +27,14 @@ function Hero(props) {
         useEffect(()=>{
            timeOut = setTimeout(() => {
                 setId((id+1)%imgArr.length);
-                console.log(id);
-                if (slide.current && slide.current.children[id]) {
-                    // slide.current.children[id].classList.replace('bg-red-500', 'bg-gray-600');
-                    slide.current.children[id].classList.replace('bg-red-500' , 'bg-gray-600' );
-                    slide.current.children[(id+1)%imgArr.length].classList.replace('bg-gray-600', 'bg-red-500' );
+                // console.log(id);
+                // if (slide.current && slide.current.children[id]) {
+                //     // slide.current.children[id].classList.replace('bg-red-500', 'bg-gray-600');
+                //     slide.current.children[id].classList.replace('bg-red-500' , 'bg-gray-600' );
+                //     slide.current.children[(id+1)%imgArr.length].classList.replace('bg-gray-600', 'bg-red-500' );
                     
-                    console.log(slide.current.children[0].classList);
-                  }
+                //     console.log(slide.current.children[0].classList);
+                //   }
             }, 5000);
         },[id])
     return (
@@ -49,7 +49,7 @@ function Hero(props) {
                 <div onClick={()=>{
                     clearTimeout(timeOut);
                     setId(0);}} className=" bg-gray-600 rounded-full w-2 h-2"></div>
-                <div onClick={()=>{clearTimeout(timeOut);setId(1)}} className=" bg-gray-600 rounded-full w-2 h-2"></div>
+                <div onClick={()=>{clearTimeout(timeOut);setId(1)}} className=" bg-gray-600 rounded-full w-2 h-2" style = {{backgroundColor : 'red'}} ></div>
                 <div onClick={()=>{clearTimeout(timeOut);setId(2)}} className=" bg-gray-600 rounded-full w-2 h-2"></div>
                 <div onClick={()=>{clearTimeout(timeOut);setId(3)}} className=" bg-gray-600 rounded-full w-2 h-2"></div>
             </div>
