@@ -45,14 +45,13 @@ function Hero(props) {
                 </div>
                 
             </div>
-            <div id='ab' ref={slide} className="p-4 flex gap-1 ">
-                <div onClick={()=>{
-                    clearTimeout(timeOut);
-                    setId(0);}} className=" bg-gray-600 rounded-full w-2 h-2" style = {{id == 0 ? {backgroundColor : 'red'} : {backgroundColor : 'gray'} }}></div>
-                <div onClick={()=>{clearTimeout(timeOut);setId(1)}} className=" bg-gray-600 rounded-full w-2 h-2" style = {{id == 1 ? {backgroundColor : 'red'} : {backgroundColor : 'gray'} }} ></div>
-                <div onClick={()=>{clearTimeout(timeOut);setId(2)}} className=" bg-gray-600 rounded-full w-2 h-2" style = {{id == 2 ? {backgroundColor : 'red'} : {backgroundColor : 'gray'} }}></div>
-                <div onClick={()=>{clearTimeout(timeOut);setId(3)}} className=" bg-gray-600 rounded-full w-2 h-2" style = {{id == 3 ? {backgroundColor : 'red'} : {backgroundColor : 'gray'} }}></div>
-            </div>
+          <div id='ab' ref={slide} className="p-4 flex gap-1">
+    <div onClick={() => { clearTimeout(timeOut); setId(0); }} className="bg-gray-600 rounded-full w-2 h-2" style={{ backgroundColor: id === 0 ? 'red' : 'gray' }}></div>
+    <div onClick={() => { clearTimeout(timeOut); setId(1) }} className="bg-gray-600 rounded-full w-2 h-2" style={{ backgroundColor: id === 1 ? 'red' : 'gray' }}></div>
+    <div onClick={() => { clearTimeout(timeOut); setId(2) }} className="bg-gray-600 rounded-full w-2 h-2" style={{ backgroundColor: id === 2 ? 'red' : 'gray' }}></div>
+    <div onClick={() => { clearTimeout(timeOut); setId(3) }} className="bg-gray-600 rounded-full w-2 h-2" style={{ backgroundColor: id === 3 ? 'red' : 'gray' }}></div>
+</div>
+
         </div>
     );
 }
